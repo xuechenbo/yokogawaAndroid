@@ -40,8 +40,8 @@ public class ChangePawActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        tv_title.setText("修改密码");
-    }
+        tv_title.setText("修改密码1111");
+}
 
     @OnClick({R.id.btn_commit, R.id.tv_back})
     public void onClick(View view) {
@@ -54,7 +54,7 @@ public class ChangePawActivity extends BaseActivity {
                     if (etSamePassword.getText().toString().trim().equals(etNewPassword.getText().toString().trim())) {
                         updateInfo();
                     } else {
-                        T.show( "两次输入的密码不一致");
+                        T.show( "两次输入的密码不一致1 1的阿斯蒂芬阿斯蒂芬阿道夫");
                     }
                 } else {
                     T.show( "请输入6~16位的密码");
@@ -64,6 +64,7 @@ public class ChangePawActivity extends BaseActivity {
     }
 
     private void updateInfo() {
+        //更新带嘛
         HashMap<String, String> paramsMap = new HashMap<>();
         paramsMap.put("jobNumber", SpUtils.getInstance(this).getString("jobNumber", ""));
         paramsMap.put("newPassword", etNewPassword.getText().toString().trim());
