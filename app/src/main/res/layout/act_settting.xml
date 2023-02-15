@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:src="@mipmap/bg_placeholder" />
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_edit_gray" />
+
+    <TextView
+        android:id="@+id/up_pws"
+        style="@style/text_Linee"
+        android:text="修改密码" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_edit_gray" />
+
+
+    <TextView
+        android:id="@+id/versionUpdate"
+        style="@style/text_Linee"
+        android:text="检查更新"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_edit_gray" />
+
+    <TextView
+        android:id="@+id/logout"
+        style="@style/text_Linee"
+        android:text="退出登录" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_edit_gray" />
+</LinearLayout>

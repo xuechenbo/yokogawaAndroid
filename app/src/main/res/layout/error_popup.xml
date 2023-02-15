@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_solid_white_corner_25"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="请输入检查表信息"
+            android:textSize="21dp" />
+
+        <ImageView
+            android:id="@+id/tv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/close_change" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_ModeName"
+            android:layout_width="380dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/ed_modiCode"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/scr_device"
+            android:hint="请输入型名"
+            android:paddingLeft="15dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ed_calculateNumber"
+            android:layout_width="380dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/scr_device"
+            android:hint="请输入计番"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/ed_seriesNumber"
+            android:layout_width="380dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/scr_device"
+            android:hint="请输入连番"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/ed_linkage"
+            android:layout_width="380dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/scr_device"
+            android:hint="请输入linkage"
+            android:paddingLeft="15dp"
+            android:textSize="15dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/line_color" />
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="确认"
+        android:textColor="@color/blue"
+        android:textSize="18dp" />
+
+</LinearLayout>

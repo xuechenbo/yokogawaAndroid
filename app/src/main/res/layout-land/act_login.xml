@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_changeNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="当前环境：本地测试      切换到外网环境"
+        android:textColor="@color/blue"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="@+id/rl_phone"
+        app:layout_constraintRight_toRightOf="@+id/rl_phone"
+        app:layout_constraintTop_toBottomOf="@+id/rl_phone" />
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="30dp"
+        android:src="@mipmap/login_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/phone_edit"
+            android:background="@color/login_edit_gray" />
+
+
+        <EditText
+            android:id="@+id/phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="请输入工号"
+            android:inputType="text"
+            android:maxLength="15"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/captcha_edit"
+            android:background="@color/login_edit_gray" />
+
+        <EditText
+            android:id="@+id/captcha_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="55dp"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textSize="18dp" />
+
+        <Button
+            android:background="@color/blue"
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_below="@+id/captcha_edit"
+            android:layout_marginTop="30dp"
+            android:text="登录" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

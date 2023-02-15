@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center|left"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_showVi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fillbankcheck"
+        app:layout_constraintBottom_toBottomOf="@+id/fillbankcheck"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="15dp"
+        android:text="CASE调查"
+        android:textColor="@color/black" />
+
+    <com.yokogawa.xc.view.TextCheckView
+        android:id="@+id/fillbankcheck"
+        android:paddingLeft="10dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tv_showVi"
+        app:layout_constraintLeft_toRightOf="@+id/tv_showVi"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+    <View
+        app:layout_constraintBottom_toBottomOf="@+id/fillbankcheck"
+        app:layout_constraintLeft_toRightOf="@id/tv_showVi"
+        app:layout_constraintTop_toTopOf="@+id/fillbankcheck"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="#958E8E" />
+</androidx.constraintlayout.widget.ConstraintLayout>

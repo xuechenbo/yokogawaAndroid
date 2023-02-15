@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450dp"
+    android:layout_height="300dp"
+    android:background="@drawable/shape_solid_white_corner_25"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_ng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="检测到NG"
+        android:textColor="#D11B1B"
+        android:textSize="20dp" />
+
+
+    <EditText
+        android:id="@+id/ed_key"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        android:background="@drawable/scr_device"
+        android:maxLength="4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@+id/tv_close"
+        android:background="@color/black" />
+
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="确认"
+        android:textColor="@color/blue"
+        android:textSize="18dp" />
+
+</RelativeLayout>

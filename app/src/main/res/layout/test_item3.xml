@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/viewLeft"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:background="#958E8E"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/rectangles" />
+
+    <TextView
+        android:id="@+id/tv_FirstName"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="项目名"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@+id/viewLeft"
+        app:layout_constraintTop_toTopOf="@+id/rectangles" />
+
+
+    <!--填空 选择-->
+    <com.yokogawa.xc.view.ExamIntegrationView
+        android:id="@+id/examView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rectangles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toRightOf="@+id/tv_FirstName"
+        app:layout_constraintRight_toLeftOf="@+id/lin_lastProject"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="#958E8E"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/rectangles" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="#958E8E"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_FirstName"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/tv_FirstName" />
+
+
+    <LinearLayout
+        android:id="@+id/lin_lastProject"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@+id/rectangles"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangles"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="0dp">
+        <View
+            android:id="@+id/view_last"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#958E8E" />
+
+        <TextView
+            android:id="@+id/tv_lastProject"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="后工程" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

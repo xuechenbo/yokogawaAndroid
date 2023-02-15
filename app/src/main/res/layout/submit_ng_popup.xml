@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="250dp"
+    android:background="@drawable/shape_solid_white_corner_25"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_ng"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="检测到NG项，是否提交？"
+        android:textColor="#D11B1B"
+        android:textSize="20dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@+id/tv_close"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="取消"
+            android:textColor="@color/blue"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="提交"
+            android:textColor="@color/blue"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</LinearLayout>

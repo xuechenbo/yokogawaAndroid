@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_FirstName"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="项目名"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rectangles"
+        android:layout_marginLeft="120.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toRightOf="@+id/tv_FirstName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/rectangles" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_FirstName"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/tv_FirstName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

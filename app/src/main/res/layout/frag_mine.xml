@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/sartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsv_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fadingEdge="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--my-->
+                <RelativeLayout
+                    android:id="@+id/my"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_scan"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="18dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/sao_ma_new"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_head"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/iv_head"
+                            android:textColor="#202020"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            tools:text="名称" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/login_edit_gray" />
+
+                <TextView
+                    android:id="@+id/tvMaterial"
+                    style="@style/text_Linee"
+                    android:text="个人信息" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+                <TextView
+                    android:id="@+id/pad_Manager"
+                    style="@style/text_Linee"
+                    android:text="PAD管理" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+                <TextView
+                    android:id="@+id/look_record"
+                    style="@style/text_Linee"
+                    android:text="检查表历史记录" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+                <TextView
+                    android:id="@+id/updatepsw"
+                    style="@style/text_Linee"
+                    android:text="修改密码" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/versionUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/my_zs"
+                        android:drawablePadding="15dp"
+                        android:paddingLeft="15dp"
+                        android:text="检查更新"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/versionUpdate"
+                        android:id="@+id/now_version"
+                        android:layout_alignBaseline="@+id/versionUpdate"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/icon_right_black" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+
+                <TextView
+                    android:id="@+id/loginout"
+                    style="@style/text_Linee"
+                    android:text="退出登录" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_edit_gray" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

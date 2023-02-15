@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/rectangles" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_FirstName"
+        app:layout_constraintLeft_toRightOf="@id/tv_FirstName"
+        app:layout_constraintTop_toTopOf="@+id/tv_FirstName" />
+
+    <TextView
+        android:id="@+id/tv_FirstName"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="项目名称"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rectangles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toRightOf="@+id/tv_FirstName"
+        android:layout_marginLeft="120.5dp"
+        app:layout_constraintRight_toLeftOf="@+id/lin_examDR"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--检查者  检查日-->
+    <LinearLayout
+        android:id="@+id/lin_examDR"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangles"
+        app:layout_constraintLeft_toRightOf="@+id/rectangles"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/rectangles">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_examer"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="检查者"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_examDate"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="检查日"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

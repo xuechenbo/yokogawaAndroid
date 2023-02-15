@@ -1,0 +1,39 @@
+数据库连接安全，线程安全
+
+12.7
+多表连接查询   1
+填空，单选，多选合并 1
+
+
+12.8
+展示界面调整  1
+Rxjava+room 内存泄漏    1(后面还需要测试)
+提交完整性检查 
+创建数据库，表
+
+
+                .subscribe(examiBeans -> {
+                    //相当于onNext
+                }, throwable -> {
+                    //相当于onError
+                }, () -> {
+                    //相当于onComplete，注意这里是Action
+                }, subscription -> {
+                    //相当于onSubscribe
+                });
+
+
+
+1，蓝牙模块
+2，数据库模块
+
+
+
+
+
+
+
+
+
+
+
